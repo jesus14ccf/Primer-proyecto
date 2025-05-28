@@ -1,0 +1,25 @@
+.clase_colores{
+    color: darkturquoise;
+
+}
+
+
+.custom-crop {  
+  height: 700px;
+  object-position: 100%;
+}
+
+.sin_deformar{
+
+     object-fit: cover;
+}
+
+.borde_redondeado{
+
+  border-radius: 100%;
+}
+
+img{
+
+  background-color: red;
+}
