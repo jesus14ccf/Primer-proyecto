@@ -135,7 +135,7 @@
         <div class="card mb-3 border-0">
             <div class="row g-0">
               <div class="col-md-5">
-                <img src="assets/img/ADOSADO4.jpg ..." class="img-fluid rounded" alt="...">
+                <img src="assets/img/ADOSADO4.jpg" class="img-fluid rounded" alt="...">
               </div>
               <div class="col-md-7">
                 <div class="card-body">
@@ -170,21 +170,38 @@
         btn.addEventListener('click', () => {chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';});
       </script>
 
-
+<!-- class="text-decoration-none text-success" -->
       <footer>
         <div class="container-fluid bg-dark p-5 text-center">
             <div class="row">
                 <div class="col"><a href="https://www.facebook.com/?locale=es_ES" class="text-decoration-none text-success" target="_blank"><i class="bi bi-facebook"></i> FACEBOOK</a></div>
                 <div class="col"><a href="https://www.instagram.com/" class="text-decoration-none text-success" target="_blank"><i class="bi bi-instagram" ></i> INSTAGRAM</a></div>
                 <div class="col"><a href="https://maps.app.goo.gl/Qy8gtMDd7iYBVLtJ9" class="text-decoration-none text-success" target="_blank"><i class="bi bi-geo-alt-fill"></i> UBICACION</a></div>
-                <div class="col"><a href="" class="text-decoration-none text-success"><i class="bi bi-telephone-fill"></i> CONTACTO</a></div>
+                <div class="col">
+
+                    <button type="button" class="btn btn-success" id="contactoBtn">
+                      <i class="bi bi-telephone-fill me-2"></i> CONTACTO
+                    </button>
+                </div>
             </div>
         </div>
       </footer>
-
-
-
-
+ 
+      <script>
+           document.addEventListener('DOMContentLoaded', function () {const contactoBtn = document.getElementById('contactoBtn');
+           new bootstrap.Popover(contactoBtn, {
+                trigger: 'focus',
+                html: true, 
+                title: 'Información de contacto',
+                content: `
+                       <div>
+                         <p><strong>📞 Tel:</strong> 123-456-7890</p>
+                       </div>
+                         `
+                      });
+                          <p><strong>👤 Nombre:</strong> Lourdes Fernandez Romero</p>
+                   });
+      </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
