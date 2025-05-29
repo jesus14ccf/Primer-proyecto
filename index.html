@@ -74,15 +74,18 @@
         <div class="carousel-inner">
           <div class="carousel-item">
             <img src="assets/img/Puesta_sol_sanlúcar_barrameda2.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item active">
-            <img src="assets/img/carreras-caballos-slider7.jpg" class="d-block w-100" alt="carreras caballos">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/vinoble_bajo_guia.png" class="d-block w-100">
-          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <div class="carousel-item active">
+           <img src="assets/img/carreras-caballos-slider7.jpg" class="d-block w-100" alt="carreras caballos">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/img/vinoble_bajo_guia.png" class="d-block w-100">
+        </div>
+        </div>
+
+     <!-- Botones para controlar el carousel   -->
+        
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
@@ -92,7 +95,7 @@
         </button>
       </div>
 
-      <!--Tarjetas-->
+      <!--Tarjetas verticales-->
 
       <div class="container mt-5">
         <div class="row">
@@ -179,7 +182,7 @@
                 <div class="col"><a href="https://maps.app.goo.gl/Qy8gtMDd7iYBVLtJ9" class="text-decoration-none text-success" target="_blank"><i class="bi bi-geo-alt-fill"></i> UBICACION</a></div>
                 <div class="col">
 
-                    <button type="button" class="btn btn-success" id="contactoBtn">
+                    <button type="button" class="btn btn-success" id="contactoBtn">  <!--btn btn-success aplica un estilo de bordes redondeados y el boton verde-->
                       <i class="bi bi-telephone-fill me-2"></i> CONTACTO
                     </button>
                 </div>
@@ -188,18 +191,19 @@
       </footer>
  
       <script>
-           document.addEventListener('DOMContentLoaded', function () {const contactoBtn = document.getElementById('contactoBtn');
-           new bootstrap.Popover(contactoBtn, {
-                trigger: 'focus',
-                html: true, 
+           document.addEventListener('DOMContentLoaded', function () {const contactoBtn = document.getElementById('contactoBtn'); //La funcion espera a que toda la página esté cargada antes de ejecutar el código
+           new bootstrap.Popover(contactoBtn, { //crea el popover y le paso la variable que tiene el boton y le paso los parametros   //Con const busco el botón usando su ID (contactoBtn) y lo guarda en la variable contactoBtn
+                trigger: 'focus',    //esto hace que el popover aparezca cuando se hace click en el boton (cuando aparece el foco), con click se abre y se sierra al hacer click encima del mismo boton, 
+                html: true,           //permite que usemos lineas de codigo html dentro de esta funcion
                 title: 'Información de contacto',
-                content: `
+                 //aqui en content escribimos el codigo html que quiero que se ejecute dentro del popover 
+                content: `   
                        <div>
-                         <p><strong>📞 Tel:</strong> 123-456-7890</p>
+                        <p><strong>📞 Tel:</strong> 123-456-7890</p>
+                        <p><strong>👤 Nombre:</strong> Lourdes Fernandez Romero</p>    
                        </div>
                          `
-                      });
-                          <p><strong>👤 Nombre:</strong> Lourdes Fernandez Romero</p>
+                      });                         
                    });
       </script>
 
